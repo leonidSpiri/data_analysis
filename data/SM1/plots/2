@@ -1,0 +1,18 @@
+digraph G {
+	overlap=scale splines=true
+	edge [fontsize=12]
+	node [fillcolor="#cae6df" shape=circle style=filled]
+	F1 [label=F1]
+	node [shape=box style=""]
+	"отметка2" [label="отметка2"]
+	"тест3" [label="тест3"]
+	"тест4" [label="тест4"]
+	"отметка1" [label="отметка1"]
+	"тест5" [label="тест5"]
+	F1 -> "тест5" [label=1.000]
+	F1 -> "отметка1" [label="0.053\np-val: 0.00"]
+	F1 -> "тест4" [label="1.033\np-val: 0.00"]
+	F1 -> "тест3" [label="0.947\np-val: 0.00"]
+	"отметка1" -> "отметка2" [label="0.349\np-val: 0.00"]
+	"тест5" -> "отметка2" [label="0.020\np-val: 0.02"]
+}
