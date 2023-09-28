@@ -22,3 +22,11 @@ print(data.groupby('class').size())
 set_option('display.precision', 2)
 
 print(data.describe())
+
+print(data.skew())
+
+n = len(data)
+srew_err = pow(((6 * (n - 1)) / ((n + 1) * (n + 3))), 1 / 3)
+print(srew_err)
+
+print(data.corr(method='pearson'))
