@@ -68,4 +68,23 @@ print(bc_p, ss_p)
 # Результат теста показывает, что p-value в обоих случаях меньше 0.05. Нулевую гипотезу о нормальном распределении подтвердить не удалось.
 # Распределение сильно отличается от нормального
 
-pg.partial_corr(data=data, x='Category 1', y='Category 2', covar='Category 3')
+print("8. partial_corr")
+print(pg.partial_corr(data=data, x='Category 1', y='Category 2', covar='Category 3'))
+print(pg.partial_corr(data=data, x='Category 1', y='Category 2', covar='Category 4'))
+print(pg.partial_corr(data=data, x='Category 1', y='Category 2', covar='Category 5'))
+print(pg.partial_corr(data=data, x='Category 1', y='Category 2', covar='Category 6'))
+# существует связь между столбцами Category 1 и Category 2, но она не сильная
+
+print("9. spearmanr")
+print(stats.spearmanr(data['Category 1'], data['Category 2']))
+# Коэффициент корреляции Спирмена показывает, что нулевая гипотеза отвеграется
+
+print("10. kendalltau")
+print(stats.kendalltau(data['Category 1'], data['Category 2']))
+# Коэффициент корреляции Кендалла показывает, что нулевая гипотеза отвеграется
+
+print("13. chisquare")
+print(stats.chisquare([16, 9]))
+# Критерий хи-квадрат показывает, что нулевая гипотеза не отвергается, так как pvalue > 0.05
+
+
